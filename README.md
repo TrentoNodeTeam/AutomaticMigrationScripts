@@ -4,8 +4,8 @@ Created by TrentoNodeTeam (Trentino Network Srl)
 It's important to create a keypair shared from the OLD node and the NEW node.
 
 ##create_backup_all_vm.sh
-This script do the follow step :
-- clean all old snapshot made with the migration scripts
+This script do the following steps :
+- clean all previous old snapshot made with the migration scripts
 - create the snapshots of all VMs
 - download all snapshots
 - upload the snapshots to the new node
