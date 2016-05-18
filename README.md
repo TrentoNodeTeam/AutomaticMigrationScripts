@@ -1,11 +1,25 @@
-# AutomaticMigrationScripts
+# AutomaticMigrationScripts v1.0
+Created by TrentoNodeTeam (Trentino Network Srl)
 
-#create_backup_all_vm.sh
+It's important to create a keypair shared from the OLD node and the NEW node.
+
+##create_backup_all_vm.sh
 This script do the follow step :
 - clean all old snapshot made with the migration scripts
 - create the snapshots of all VMs
 - download all snapshots
 - upload the snapshots to the new node
 
-It's important to create a keypair shared from the OLD node and the NEW node in order to send the snapshots.
 The snapshots could be filtered by compute hust adding --host nodeXX.domain.tld in the command nova list --all-tenants
+
+##create_image_from_backup.sh
+run this script in order to create the script to upload all the snapshots moved on the new node.
+The scirpt have to be copied on the new node and run on it
+
+
+##keypair_backup.sh
+Create 2 scripts that can be found on the new node. It's enough to run the script "create_keypairs_from_backup.sh" and all the keypairs will be uploaded and associated to the users
+
+
+##resource_backup.sh
+create 2 scripts that have to be copied and run on the NEW node . The quota will be restored on the new node.
