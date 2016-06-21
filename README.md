@@ -13,7 +13,7 @@ This script do the following steps :
 The snapshots could be filtered by compute hust adding --host nodeXX.domain.tld in the command nova list --all-tenants
 
 ##create_image_from_backup.sh
-run this script in order to create the script to upload all the snapshots moved on the new node.
+Run this script in order to create the script to upload all the snapshots moved on the new node.
 The scirpt have to be copied on the new node and run on it
 
 
