@@ -22,4 +22,4 @@ Create 2 scripts that can be found on the new node. It's enough to run the scrip
 
 
 ##resource_backup.sh
-create 2 scripts that have to be copied and run on the NEW node . The quota will be restored on the new node.
+Create 2 scripts that have to be copied and run on the NEW node . The quota will be restored on the new node as previously configured in the "old" node.
