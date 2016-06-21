@@ -10,6 +10,7 @@ echo "#!/bin/bash" > $TENANT_FILE
 # for every VM in the vm_file
 for vm in `cat $VM_FILE`;
 do
+
 TENANT_ID=`nova show $vm | grep tenant_id  | \
    igawk -F '|' '
    @include trims.awk
@@ -22,6 +23,5 @@ VM_NAME=`nova show $vm | grep '| name'  | \
 
 #echo $TENANT_ID $VM_NAME
 echo "glance image-create --name $VM_NAME --disk-format=qcow2 --container-format=bare --file snapshot-$vm.qcow  --is-public false --owner $TENANT_ID"  >> $TENANT_FILE "--progress"
-
 
 done
