@@ -1,5 +1,6 @@
 #!/bin/bash
 ######
+
 # extract keypair from DB
 # create the file
 # create the commands to upload the keypairs on the new node
