@@ -25,10 +25,8 @@ list_images() {
 }
 
 
-
 list_vms
 list_images
-
 
 ################
 #### MAIN  #####
