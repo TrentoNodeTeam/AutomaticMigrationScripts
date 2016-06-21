@@ -1,6 +1,8 @@
 #!/bin/bash
+# Nova & neutron quota backup scripts
 
 NOVA=$( mysql nova -Ne 'select "nova quota-update ",resource,hard_limit,project_id from quotas where deleted=0 order by project_id;')
+
 echo "#!/bin/bash" > "/root/scripts/nova_quota.sh"
 echo "$NOVA" >> "/root/scripts/nova_quota.sh"
 
